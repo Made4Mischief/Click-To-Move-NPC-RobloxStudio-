@@ -14,12 +14,35 @@ The NPC automatically moves to the position where the player clicks.
 - ⚡ Easy setup
 - 🧩 Beginner-friendly structure
 - 🔧 Uses Roblox humanoid movement system
+- 🌐 Client-server communication using RemoteEvents
 
 ---
 
 # 📦 Installation
 
-## 1️⃣ Server Script Setup
+## 1️⃣ Create RemoteEvent
+
+Open:
+
+```lua
+ReplicatedStorage
+```
+
+Create a new **Folder** named:
+
+```lua
+Events
+```
+
+Inside the `Events` folder, create a new **RemoteEvent** named:
+
+```lua
+npcPosition
+```
+
+---
+
+## 2️⃣ Server Script Setup
 
 Open:
 
@@ -35,7 +58,7 @@ agent.lua
 
 ---
 
-## 2️⃣ Client Script Setup
+## 3️⃣ Client Script Setup
 
 Open:
 
@@ -71,6 +94,10 @@ NPC Moves To Target
 # 📁 Project Structure
 
 ```text
+ReplicatedStorage
+└── Events
+    └── npcPosition
+
 ServerScriptService
 └── agent.lua
 
@@ -95,32 +122,3 @@ The NPC should also be placed inside:
 ```lua
 Workspace
 ```
-
----
-
-# 🚀 Getting Started
-
-1. Start the game
-2. Click anywhere on the map
-3. Watch the NPC move to the clicked position
-
----
-
-# 🛠️ Technologies Used
-
-- `Humanoid:MoveTo()`
-- RemoteEvents
-- Mouse position detection
-- Client-server communication
-
----
-
-# 💡 Use Cases
-
-- 👥 Companion NPC systems
-- 🎯 Point-and-click games
-- 🗺️ RTS movement mechanics
-- 🧪 AI testing projects
-- 🎮 Sandbox games
-
----

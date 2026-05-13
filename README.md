@@ -15,6 +15,7 @@ The NPC automatically moves to the position where the player clicks.
 - 🧩 Beginner-friendly structure
 - 🔧 Uses Roblox humanoid movement system
 - 🌐 Client-server communication using RemoteEvents
+- 🎞️ Supports default Roblox NPC animations
 
 ---
 
@@ -77,6 +78,23 @@ PositionGetter.lua
 
 ---
 
+# 🎞️ NPC Animation Setup
+
+If you want your NPC to use the default Roblox animations:
+
+1. Open your NPC model
+2. Find the script named:
+
+```lua
+Animate
+```
+
+3. Change it from a **LocalScript** to a **Script** (Server Script)
+
+⚠️ Keep the script inside the NPC model.
+
+---
+
 # ⚙️ How It Works
 
 ```text
@@ -104,6 +122,9 @@ ServerScriptService
 StarterPlayer
 └── StarterPlayerScripts
     └── PositionGetter.lua
+
+NPC
+└── Animate
 ```
 
 ---
@@ -122,3 +143,13 @@ The NPC should also be placed inside:
 ```lua
 Workspace
 ```
+
+---
+
+# 🚀 Getting Started
+
+1. Start the game
+2. Click anywhere on the map
+3. Watch the NPC move to the clicked position
+
+---
